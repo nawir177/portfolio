@@ -6,6 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="dist/output.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
       <title>My Protfolio</title>
    </head>
@@ -68,12 +69,12 @@
          <div class="container pt-16 md:pt-28 pb-30">
             <div class="max-w-7xl mx-auto p-6">
                <div class="grid md:grid-cols-2 justify-center gap-3">
-                  <div class="col pt-10">
+                  <div class="col pt-10" data-aos="zoom-in" data-aos-duration="1000">
                      <h2 class="md:text-3xl text-2xl font-bold text-white font-base mb-3">Hello, It's Me</h2>
-                     <h1 class="md:text-5xl text-4xl font-bold text-white font-base">Muhammad Nawir</h1>
-                     <h2 class="md:text-3xl text-2xl font-bold text-white font-base mt-3">And I'm a <span
-                           class="text-primary">Web
-                           Developer</span></h2>
+                     <h1 class="md:text-5xl text-4xl font-bold text-white font-base" data-aos="fade-right" data-aos-duration="1500">Muhammad Nawir</h1>
+                     <h2 class="md:text-3xl text-2xl font-bold text-white font-base mt-3" data-aos="fade-left" data-aos-duration="1500">And I'm a <span
+                           class="text-slider-items hidden"> Web Developer,Frontend Developer,Backend
+                           Developer,Fullstack Developer</span><span class="text-slider text-primary"></span></h2>
                      <p class="mt-3 text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint iste
                         labore eveniet culpa eaque minus quos possimus nam dolores voluptatem!</p>
                      <!-- icon -->
@@ -142,7 +143,7 @@
                      </button>
                   </div>
                   <div class="col">
-                     <img src="img/profile/img.png" alt="" class="mx-auto" width="600">
+                     <img src="img/profile/img.png" data-aos="fade-down" data-aos-duration="1000" alt="" class="mx-auto" width="600">
                   </div>
                </div>
             </div>
@@ -154,7 +155,7 @@
       <section class="bg-secondary mx-auto ">
          <div class="container pt-40 pb-20">
             <div class="max-w-7xl mx-auto p-6">
-               <div class="grid md:grid-cols-2 justify-center gap-3 items-center">
+               <div class="grid md:grid-cols-2 justify-center gap-3 items-center" data-aos="zoom-in-up" data-aos-duration="1000">
                   <div class="col">
                      <img src="img/profile/img2.png" alt="" class="mx-auto" width="370">
                   </div>
@@ -518,6 +519,50 @@
          </div>
       </footer>
       <!-- Footer Section End -->
+
+      <!-- jquery link -->
+      <script src="dist/js/jquery.min.js"></script>
+      <!-- end jquery link -->
+
+      <!-- typed js -->
+      <script src="dist/js/typed/typed.min.js"></script>
+      <!-- end typed js -->
+
+
+      <!-- gsap link -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script> -->
+      <!-- end gsap link -->
+
+      <!-- aos link -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
+      <!-- end aos link -->
+
+      <!-- gsap text plugin -->
+      <script>
+      // gsap.registerPlugin(TextPlugin);
+      // gsap.to(".profesi", { duration: 3,delay:"1", text: "Web Developer" })
+      </script>
+      <!-- end text plugin -->
+
+      <!-- script animate text -->
+      <script>
+         /*--/ Star Typed /--*/
+         if ($('.text-slider').length == 1) {
+            var typed_strings = $('.text-slider-items').text();
+            var typed = new Typed('.text-slider', {
+               strings: typed_strings.split(','),
+               typeSpeed: 80,
+               loop: true,
+               backDelay: 1000,
+               backSpeed: 30
+            });
+         }
+      </script>
+      <!-- end sciript animate text -->
       <script src="dist/js/script.js"></script>
    </body>
 
